@@ -74,14 +74,25 @@ $config = [
             //         ],
             //     ],
             // ],
-        ]
+        ],
+        // 'urlManager' => [
+        //     'enablePrettyUrl' => true,
+        //     'enableStrictParsing' => false,
+        //     'showScriptName' => false,
+        //     'rules' => [
+        //         ['class' => 'yii\rest\UrlRule', 'controller' => 'user'],//为user控制器添加了访问
+        //     ],
+        //     // ...
+        // ],
     ],
     'params' => $params,
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
             'site/*', // add or remove allowed actions to this list
+            'admin/*',
             'gii/*',
+            'user/*'
         ],
     ],
 ];
